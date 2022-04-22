@@ -1,0 +1,9 @@
+schedule:
+  feedbacks_generate:
+    cron: "0 9 * * *"
+    class: FeedbackWorker
+    queue: default
+    concurrency: 25
+    timeout: 300
+    verbose: false
+    logfile: ./log/sidekiq.log
